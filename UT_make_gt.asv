@@ -1,6 +1,5 @@
 function UT_make_gt()
 global droot;
-global dpath;
 dlist =dir(droot);
 isdirlist =zeros(size(dlist));
 for i=1:length(dlist)
@@ -46,7 +45,7 @@ for c =1 : length(dlist)
         
         UT_annotation{cnt}.gt_start= gt_start;
         UT_annotation{cnt}.gt_end= gt_end;
-        save([dpath 'UT_annotation.mat'],'UT_annotation');
-        save([dpath 'UT_nVideos.mat'], 'nVideolist');
+        save([dpath '/UT_annotation.mat','UT_annotation');
+        save('./../data/UT_nVideos.mat', 'nVideolist');
     end
 end
