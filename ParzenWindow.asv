@@ -1,0 +1,6 @@
+function density=ParzenWindow(data) %data : N*D
+dist =vl_alldist2(data(1:100,:)','CHI2');
+Kern =exp(1/20000*vl_alldist2(data(1:100,:)','CHI2')); %N*N to kernel feature must be normalized
+
+
+density =sum(Kern); %1*N
