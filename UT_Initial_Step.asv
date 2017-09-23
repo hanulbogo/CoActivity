@@ -14,7 +14,7 @@ end
 fpath='F:\CoActivity\Youtubefeatures\';
 stepsize=10;
 
-%% Initializations
+%% Initiali
 UT_make_gt() % new annotation
 UT_feats2mat(); %feat file to mat 
 UT_step_hist(stepsize); % histogram of every "stepsize(10)" frames.

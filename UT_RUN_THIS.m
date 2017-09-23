@@ -1,0 +1,60 @@
+function UT_RUN_THIS()
+addpath(genpath('./Codes/'));
+global dpath;
+global npath;
+dpath ='./../data/';
+npath =[dpath ,'UT_subsequence_hists/'];
+% subsequnce sampled every 10 frame
+stepsize =10;
+% length of subsequence
+len= stepsize*3;
+% DB information
+load([dpath ,'UT_nVideos.mat']);
+% Annotation for YouTube dataset. GT information.
+load([dpath ,'UT_annotation.mat']);%'UT_annotation'
+
+
+nCenters =4000;
+% Algorithm.
+global mname;
+mlist = {'AMC', 'AMC-','PR'};
+nsubseq=0;
+for mm =1
+    
+    mname =mlist{mm};
+    fprintf('%s \n',mname);
+    
+    
+    for class =1%:11
+        close all;
+        nVideos = nVideolist(class);
+        %             Vidlist = [1:12];
+        lname =UT_annotation{sum(nVideolist(1:(class-1)))+1}.label;
+        fprintf('%s \n',lname);
+        
+        if ~exist([npath,lname,'_stepsize_',num2str(stepsize), '_subsequence_len_',num2str(len),'.mat'],'file')
+            UT_subsequence_hist(stepsize, class, len); % 
+        end
+        
+        
+        density= UT_AMC(class,len,stepsize,lname) ;
+        %%%%%%%%%%%%%%
+        density_map= UT_make_weight_map_org(stepsize, class, len,density,nCenters);
+        Threshold=UT_plot_denstiy_map(density_map,nVideos, class);
+        %             UT_plot_denstiy_map_org(density_map,stepsize, class, len,nCenters,Threshold);
+        %%%%%%%%%%%%%%
+        
+        
+        %             Threshold=UT_plot_denstiy_map_Mean(density_map,nVideos, class);
+        %
+        %             UT_plot_denstiy_map_org(density_map,stepsize, class, len,nCenters,Threshold);
+        %                 UT_evaluate_per_frame_org(stepsize, class, len,nCenters);
+        
+        %             end
+        %                 UT_video_write(stepsize,class,len,nCenters,Threshold);
+        
+        fprintf('\n');
+    end
+    
+end
+
