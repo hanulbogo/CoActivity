@@ -41,19 +41,9 @@ for mm =1
         
         %% Co-activity score
         coactivity_score= UT_CoActivity_Score(stepsize, class, len,absorption_time);
-        Threshold=UT_plot_denstiy_map(coactivity_score,nVideos, class);
-        %             UT_plot_denstiy_map_org(density_map,stepsize, class, len,nCenters,Threshold);
-        %%%%%%%%%%%%%%
-        
-        
-        %             Threshold=UT_plot_denstiy_map_Mean(density_map,nVideos, class);
-        %
-        %             UT_plot_denstiy_map_org(density_map,stepsize, class, len,nCenters,Threshold);
-        %                 UT_evaluate_per_frame_org(stepsize, class, len,nCenters);
-        
-        %             end
-        %                 UT_video_write(stepsize,class,len,nCenters,Threshold);
-        
+        %% Thresholding and Detect Co-activity frames by using GMM
+        UT_Thresholding(coactivity_score,nVideos, class);
+                
         fprintf('\n');
     end
     
