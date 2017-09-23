@@ -18,7 +18,7 @@ nCenters =4000;
 % Algorithm.
 global mname;
 mlist = {'AMC', 'AMC-','PR'};
-nsubseq=0;
+
 for mm =1
     
     mname =mlist{mm};
@@ -28,10 +28,10 @@ for mm =1
     for class =1%:11
         close all;
         nVideos = nVideolist(class);
-        %             Vidlist = [1:12];
         lname =UT_annotation{sum(nVideolist(1:(class-1)))+1}.label;
         fprintf('%s \n',lname);
         
+        %% Features of subsequences
         if ~exist([npath,lname,'_stepsize_',num2str(stepsize), '_subsequence_len_',num2str(len),'.mat'],'file')
             UT_subsequence_hist(stepsize, class, len); % 
         end
@@ -40,7 +40,7 @@ for mm =1
         absorption_time= UT_AMC(class,len,stepsize,lname);
         
         %% Co-activity score
-        coactivity_score= UT_make_weight_map_org(stepsize, class, len,absorption_time,nCenters);
+        coactivity_score= UT_CoActivity_Score(stepsize, class, len,absorption_time);
         Threshold=UT_plot_denstiy_map(coactivity_score,nVideos, class);
         %             UT_plot_denstiy_map_org(density_map,stepsize, class, len,nCenters,Threshold);
         %%%%%%%%%%%%%%
