@@ -36,11 +36,12 @@ for mm =1
             UT_subsequence_hist(stepsize, class, len); % 
         end
         
+        %% Graph Construction and Co-activity score AMC
+        absorption_time= UT_AMC(class,len,stepsize,lname);
         
-        density= UT_AMC(class,len,stepsize,lname) ;
-        %%%%%%%%%%%%%%
-        density_map= UT_make_weight_map_org(stepsize, class, len,density,nCenters);
-        Threshold=UT_plot_denstiy_map(density_map,nVideos, class);
+        %% Co-activity score
+        coactivity_score= UT_make_weight_map_org(stepsize, class, len,absorption_time,nCenters);
+        Threshold=UT_plot_denstiy_map(coactivity_score,nVideos, class);
         %             UT_plot_denstiy_map_org(density_map,stepsize, class, len,nCenters,Threshold);
         %%%%%%%%%%%%%%
         

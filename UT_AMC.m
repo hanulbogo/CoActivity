@@ -43,32 +43,34 @@ mask= ones(size(dists{1}));
 for v=1:nVideos
     startidx = sum(nnodes(1:v-1))+1;
     endidx = sum(nnodes(1:v));
-    
     mask(startidx:endidx,startidx:endidx) =0;
 end
-
+% If the number of trajectories in the subsequence is smaller than len*.5, then ignore it
 mask(NDATA<len*.5,:)=0;
 mask(:,NDATA<len*.5)=0;
 
+%% Distance to Weights
 Kern =KernMask(dists,mask);
-
+% If the number of trajectories in the subsequence is smaller than len*.5, then ignore it
 Kern(NDATA<len*.5,:)=0;
 Kern(:,NDATA<len*.5)=0;
-
-
+% Masking out intra-video connection
 Kern =Kern.*mask;
 step =len/stepsize;
-%% Temporal Mask
+
+%% Temporal Mask (temporal connection)
 tempKern = zeros(size(mask));
 
 for i=1:length(Kern)
-        tempKern(i,[max(1,i-step*1):i-1, i+1:min(i+step*1,length(Kern))] )=1;
+    tempKern(i,[max(1,i-step*1):i-1, i+1:min(i+step*1,length(Kern))] )=1;
 end
 tempKern=tempKern(1:length(Kern),1:length(Kern));
 tempKern= tempKern+tempKern';
 tempKern=tempKern.*(1-mask);
 tempKern(tempKern>=1)=1;
 
+
+%% Absorbing Markov chain (and other algorithms)
 global mname;
 if strcmp(mname,'AMC')
     x = AMC_MeanTemp(Kern(NDATA>=len*.5,NDATA>=len*.5),tempKern(NDATA>=len*.5,NDATA>=len*.5),mask(NDATA>=len*.5,NDATA>=len*.5));
