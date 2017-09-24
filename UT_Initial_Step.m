@@ -1,3 +1,5 @@
+addpath(genpath('./Codes/'));
+
 global droot;
 global dpath;
 global fpath;
@@ -13,6 +15,7 @@ end
 % Path of features.
 fpath='F:\CoActivity\Youtubefeatures\';
 stepsize=10;
+
 
 %% Initializations
 UT_make_gt() % new annotation

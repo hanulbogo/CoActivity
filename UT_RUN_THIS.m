@@ -25,7 +25,7 @@ for mm =1
     fprintf('%s \n',mname);
     
     
-    for class =1%:11
+    for class =1:11
         close all;
         nVideos = nVideolist(class);
         lname =UT_annotation{sum(nVideolist(1:(class-1)))+1}.label;
