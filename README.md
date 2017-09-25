@@ -11,16 +11,17 @@ Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">F
 
 # Step 2 - Initial Settings
 ## Input videos
-  Make a directory as <input_root>/<folder_name>/ <br>
-  Put ground-truth information <input_root>/<folder_name>/folder_name_GT.txt <br>
+  Make a directory as _<input_root>/<folder_name>/_ <br>
+  Put ground-truth information _<input_root>/<folder_name>/folder_name_GT.txt_ <br>
+  Here is an example of _Gt.txt_ file.
 <pre><code>
-#video_nuber #start_frame #end frame
-1            1            470
-2            1            750
-3            198          500
-3            681          1281
+1 1 470
+2 1 750
+3 198 500
+3 681 1281
 </code></pre>
-  
+  Each line consists of 1) video number, 2) the start frame and 3) the end frame of the co-activity in the video.<br>
+  For some videos which have multiple instances of the co-activity, you should put the information about each instance in each line as last two lines of the example.
   
 You need a videos and the ground truth information 
 ground-truth.txt file in each 
