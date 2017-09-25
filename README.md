@@ -30,4 +30,9 @@ To run this git code, you should use following feature extraction code.<br>
   2. Run the ".bat" files, the output of running _CoActDiscovery_Feature_Extraction_Youtube.m_., to get the features.
 
 # Step 3 - Run UT_Initial_Step.m
-This code translate the extracted features into _".mat"_ files 
+This code translate information about input, ground truth and the extracted features into _".mat"_ files.<br>
+Edit and run this code with your own directories.
+
+# Step 4 - Run UT_RUN_THIS.m
+This code returns the co-activity frames of the input videos and precision, recall and F-measure.
+Edit and run this code with your own directories.
