@@ -22,8 +22,8 @@ Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">F
 3 198 500
 3 681 1281
 </code></pre>
-  Each line consists of 1) video number, 2) the start frame and 3) the end frame of the co-activity in the video.<br>
-  For some videos which have multiple instances of the co-activity, you should put the information about each instance in each line like the last two lines of the example.
+    Each line consists of 1) video number, 2) the start frame and 3) the end frame of the co-activity in the video.<br>
+    For some videos which have multiple instances of the co-activity, you should put the information about each instance in each line like the last two lines of the example.
 
 
 Run UT_Initial_Step.m <br>
