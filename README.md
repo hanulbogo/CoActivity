@@ -13,13 +13,13 @@ Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">F
 ## Input videos
   Make a directory as <input_root>/<folder_name>/ <br>
   Put ground-truth information <input_root>/<folder_name>/folder_name_GT.txt <br>
-"'
+"`
 
 1 1 470
 2 1 750
 3 198 500
 3 681 1281
-'"
+`"
   
   
 You need a videos and the ground truth information 
