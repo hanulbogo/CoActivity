@@ -25,5 +25,9 @@ Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">F
   - Each line consists of 1) video number, 2) the start frame and 3) the end frame of the co-activity in the video.<br>
   - For some videos which have multiple instances of the co-activity, you should put the information about each instance in each line like the last two lines of the example.
 
+  5. The original videos used in the experiments of the paper is in the following link
+  - Download: <a href="https://drive.google.com/open?id=0B89l1vetFfpqYzZqR3RXZ09jeDg">YouTube co-activity dataset</a> </li>
+  
+
 
 Run UT_Initial_Step.m <br>
