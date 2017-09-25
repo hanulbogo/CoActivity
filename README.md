@@ -8,7 +8,7 @@ Donghun Yeo, Bohyung Han, JoonHee Han, AAAI'16
 ## Step 1 - Prepare input videos and ground truth file
   1. Make a directory as _<input_root>/<folder_name>/_ <br>
   2. Put the videos in this directory. 
-  - I recommend you to use .avi file. If you want different type you should edit _"Codes/Initialization/UT_make_gt.m"_.
+  - Recommend you to use .avi files. If you want different type, then you should edit _"Codes/Initialization/UT_make_gt.m"_.
   3. Please note that the vidoes are ordered by their name.
   4. Put ground-truth information _<input_root>/<folder_name>/folder_name_GT.txt_ <br>
   Here is an example of _GT.txt_ file.
