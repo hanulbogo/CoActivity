@@ -14,10 +14,11 @@ Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">F
   Make a directory as <input_root>/<folder_name>/ <br>
   Put ground-truth information <input_root>/<folder_name>/folder_name_GT.txt <br>
 <pre><code>
-1 1 470
-2 1 750
-3 198 500
-3 681 1281
+#video_nuber #start_frame #end frame
+1            1            470
+2            1            750
+3            198          500
+3            681          1281
 </code></pre>
   
   
