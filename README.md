@@ -10,7 +10,7 @@ To run this git code, you should use following feature extraction code.<br>
 Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">Feature extraction link</a>
 
 # Step 2 - Initial Settings
-## Input videos
+## Input videos and ground truth file
   1. Make a directory as _<input_root>/<folder_name>/_ <br>
   2. Put the videos in this directory. (I recommend you to use .avi file. If you want different type you should change code in "Initialization/UT_make_gt.m".)
   3. Please note that the vidoes are ordered by their name.
@@ -22,8 +22,8 @@ Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">F
 3 198 500
 3 681 1281
 </code></pre>
-Each line consists of 1) video number, 2) the start frame and 3) the end frame of the co-activity in the video.<br>
-For some videos which have multiple instances of the co-activity, you should put the information about each instance in each line like the last two lines of the example.
+- Each line consists of 1) video number, 2) the start frame and 3) the end frame of the co-activity in the video.<br>
+- For some videos which have multiple instances of the co-activity, you should put the information about each instance in each line like the last two lines of the example.
 
 
 Run UT_Initial_Step.m <br>
