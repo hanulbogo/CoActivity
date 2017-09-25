@@ -2,12 +2,12 @@
 
 This code is for the following paper.
 
-<a href="http://cvlab.postech.ac.kr/research/coactivity/">Unsupervised Co-activity Detection from Multiple Videos using Absorbing Markov Chain,</a><br>
+- <a href="http://cvlab.postech.ac.kr/research/coactivity/">Unsupervised Co-activity Detection from Multiple Videos using Absorbing Markov Chain,</a><br>
 Donghun Yeo, Bohyung Han, JoonHee Han, AAAI'16
 
 # Step 1 - Feature Extraction
 To run this git code, you should use following feature extraction code.<br>
-Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">Feature extraction link</a>
+- Download: <a href="http://cvlab.postech.ac.kr/research/coactivity/yeo-han.pdf">Feature extraction link</a>
 
 # Step 2 - Initial Settings
 ## Input videos and ground truth file
