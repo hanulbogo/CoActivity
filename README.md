@@ -3,7 +3,7 @@
 This code is for the following paper.
 
 - <a href="http://cvlab.postech.ac.kr/research/coactivity/">Unsupervised Co-activity Detection from Multiple Videos using Absorbing Markov Chain,</a><br>
-Donghun Yeo, Bohyung Han, JoonHee Han, AAAI'16
+Donghun Yeo, Bohyung Han, Joon Hee Han, AAAI'16
 
 ## Step 1 - Prepare input videos and ground truth file
   1. Make a directory as _<input_root>/<folder_name>/_ <br>
