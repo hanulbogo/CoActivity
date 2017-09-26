@@ -26,7 +26,7 @@ Donghun Yeo, Bohyung Han, JoonHee Han, AAAI'16
 
 ## Step 2 - Feature Extraction
 To run this git code, you should use following feature extraction code.<br>
-- Download: <a href="https://postechackr-my.sharepoint.com/personal/hanulbog_postech_ac_kr/_layouts/15/guestaccess.aspx?docid=1e00d605b847d45b6b5b67584f9a8d49d&authkey=AbRlcODM6Od1hxz9U03XhKM">Feature extraction link</a>
+- Download: <a href="https://postechackr-my.sharepoint.com/personal/hanulbog_postech_ac_kr/_layouts/15/guestaccess.aspx?docid=11b1225c11ea6449d98dee9d8ed7c9043&authkey=AWie5iKci56PRbUMRbVznQg">Feature extraction link</a>
   1. Edit and run _CoActDiscovery_Feature_Extraction_Youtube.m_ with your own input video path _<input_root>_.
   2. Run the ".bat" files, the output of running _CoActDiscovery_Feature_Extraction_Youtube.m_., to get the features.
 
