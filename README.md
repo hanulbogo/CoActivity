@@ -22,7 +22,7 @@ Donghun Yeo, Bohyung Han, JoonHee Han, AAAI'16
   - For some videos which have multiple instances of the co-activity, you should put the information about each instance in each line like the last two lines of the example.
 
   5. The original videos used in the experiments of the paper is in the following link
-  - Download: <a href="https://drive.google.com/open?id=0B89l1vetFfpqYzZqR3RXZ09jeDg">YouTube co-activity dataset</a> </li>
+  - Download: <a href="https://postechackr-my.sharepoint.com/personal/hanulbog_postech_ac_kr/_layouts/15/guestaccess.aspx?docid=10f4bfbfd6fc84f6d826f7f7c21e17881&authkey=ATVKjd9ERhjbVvIzxWZift4">YouTube co-activity dataset</a> </li>
 
 ## Step 2 - Feature Extraction
 To run this git code, you should use following feature extraction code.<br>
