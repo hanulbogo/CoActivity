@@ -11,9 +11,9 @@ end
 nCenter =4000;
 
 for i= 1:length(UT_annotation)
-    if ~exist([cpath,UT_annotation{i}.name,'.mat'],'file') || exist([hpath,UT_annotation{i}.name,'_stepsize_',num2str(stepsize),'_HISTS.mat'],'file')
-        continue;
-    end
+%     if ~exist([cpath,UT_annotation{i}.name,'.mat'],'file') || exist([hpath,UT_annotation{i}.name,'_stepsize_',num2str(stepsize),'_HISTS.mat'],'file')
+%         continue;
+%     end
     fprintf('make histogram of every %d frames. processing %s %d / %d \n',stepsize,UT_annotation{i}.name,i,length(UT_annotation));
     
     load([cpath,UT_annotation{i}.name,'.mat']);
@@ -22,7 +22,6 @@ for i= 1:length(UT_annotation)
     Nnode = ceil(sum(UT_annotation{i}.nFrames)/stepsize);
     node_start =0;
     node_end=0;
-    
     
     Thists=zeros(Nnode,nCenter);
     HOGhists=Thists;%zeros(Nnode,nCenter);

@@ -19,17 +19,17 @@ nCenters =4000;
 global mname;
 mlist = {'AMC', 'AMC-','PR'};
 
-for mm =1
+for mm =1:3
     
     mname =mlist{mm};
     fprintf('%s \n',mname);
     
     
-    for class =1:11
+    for class =1%:11
         close all;
         nVideos = nVideolist(class);
         lname =UT_annotation{sum(nVideolist(1:(class-1)))+1}.label;
-        fprintf('%s \n',lname);
+        fprintf('%s ',lname);
         
         %% Features of subsequences
         if ~exist([npath,lname,'_stepsize_',num2str(stepsize), '_subsequence_len_',num2str(len),'.mat'],'file')

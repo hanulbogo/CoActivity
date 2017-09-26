@@ -9,18 +9,18 @@ cpath =[dpath,'UT_feat/'];
 if ~exist(cpath,'dir')
     mkdir(cpath);
 end
-
-Ti =7;
-HOGi=8;
-HOFi=9;
-MBHxi=10;
-MBHyi=11;
+% 
+Ti =3;
+HOGi=4;
+HOFi=5;
+MBHxi=6;
+MBHyi=7;
 
 
 for i= 1: length(UT_annotation)
-    %     if exist([cpath,UT_annotation{i}.name,'.mat'],'file')
-    %         continue;
-    %     end
+%     if exist([cpath,UT_annotation{i}.name,'.mat'],'file')
+%         continue;
+%     end
     
     t =[];
     
@@ -34,12 +34,12 @@ for i= 1: length(UT_annotation)
     end
     %Original feature
     fid1=fopen([fpath,vname(1:end-4),'_1.feats']);
-    feat1 = textscan(fid1,'%d%d%f%d%d%f%d%d%d%d%d');
+    feat1 = textscan(fid1,'%d%d%d%d%d%d%d');
     fclose(fid1);
     
     %Flipped feature
     fid2=fopen([fpath,vname(1:end-4),'_2.feats']);
-    feat2= textscan(fid2,'%d%d%f%d%d%f%d%d%d%d%d');
+    feat2= textscan(fid2,'%d%d%d%d%d%d%d');
     fclose(fid2);
     
     t =[feat1{1}+1; feat2{1}+1];
